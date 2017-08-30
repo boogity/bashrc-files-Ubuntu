@@ -1,0 +1,54 @@
+export black="\[\033[0;38;5;0m\]"
+export red="\[\033[0;38;5;1m\]"
+export orange="\[\033[0;38;5;130m\]"
+export green="\[\033[0;38;5;2m\]"
+export yellow="\[\033[0;38;5;3m\]"
+export blue="\[\033[0;38;5;4m\]"
+export bblue="\[\033[0;38;5;12m\]"
+export magenta="\[\033[0;38;5;55m\]"
+export cyan="\[\033[0;38;5;6m\]"
+export white="\[\033[0;38;5;7m\]"
+export coldblue="\[\033[0;38;5;33m\]"
+export smoothblue="\[\033[0;38;5;111m\]"
+export iceblue="\[\033[0;38;5;45m\]"
+export turqoise="\[\033[0;38;5;50m\]"
+export smoothgreen="\[\033[0;38;5;42m\]"
+export COLOR_NC='\e[0m' # No Color
+export COLOR_WHITE='\e[1;37m'
+export COLOR_BLACK='\e[0;30m'
+export COLOR_BLUE='\e[0;34m'
+export COLOR_LIGHT_BLUE='\e[1;34m'
+export COLOR_GREEN='\e[0;32m'
+export COLOR_LIGHT_GREEN='\e[1;32m'
+export COLOR_CYAN='\e[0;36m'
+export COLOR_LIGHT_CYAN='\e[1;36m'
+export COLOR_RED='\e[0;31m'
+export COLOR_LIGHT_RED='\e[1;31m'
+export COLOR_PURPLE='\e[0;35m'
+export COLOR_LIGHT_PURPLE='\e[1;35m'
+export COLOR_BROWN='\e[0;33m'
+export COLOR_YELLOW='\e[1;33m'
+export COLOR_GRAY='\e[0;30m'
+export COLOR_LIGHT_GRAY='\e[0;37m'
+
+
+case "$TERM" in
+xterm)
+    PS1="$COLOR_CYAN ┌─($orange\u@\h \$(date \"+%a, %d %b %y\")$bblue)─\${fill}─($orange\$newPWD\
+        $bblue)─┐\n$bblue└─($orange\$(date \"+%H:%M\") $(parse_git_branch) \$$bblue)─>$white "
+    ;;
+screen)
+    PS1="$bblue┌─($orange\u@\h \$(date \"+%a, %d %b %y\")$bblue)─\${fill}─($orange\$newPWD\
+$bblue)─┐\n$bblue└─($orange\$(date \"+%H:%M\") \$$bblue)─>$white "
+    ;;    
+    *)
+    PS1="┌─(\u@\h \$(date \"+%a, %d %b %y\"))─\${fill}─(\$newPWD\
+        )─┐\n└─(\$(date \"+%H:%M\") $(parse_git_branch) \$)─> "
+    ;;
+esac
+
+# Determine what prompt to display:
+# 1.  Display simple custom prompt for shell sessions started
+#     by script.  
+# 3   Display promptcmd for all other cases.
+
