@@ -1,16 +1,4 @@
-############################################################
-# Simple but Cute and Helpful (TM) Bash Settings
-#
-# cat feedback >> "kirtika.ruchandani@gmail.com"
-############################################################
-										#Color settings
-#https://github.com/rkirti/bashrc
-#!/usr/bin/env bash
-# ${HOME}/.bashrc: executed by bash(1) for non-login shells.
-# If not running interactively, don't do anything
-[ -z "$PS1" ] && return
-
-# User Info
+#TODO: Come up with a good function to output STDERRED in red. 
 
 export USERNAME="William"
 export NICKNAME="Willy"
@@ -35,9 +23,10 @@ uptime   # Needs: 'sudo apt-get install lsscsi'
 lsscsi
 free -m 
 
-
+# if [-n "$force_color_prompt" ]; then
 PS1="\[$COLOR_CYAN\]┌─(\[$COLOR_NC\]\u@\h\[$COLOR_CYAN\])─\${fill}─(\[$COLOR_NC\]\$(date \"+%a, %d %b %y\") \
-\[$COLOR_CYAN)\]─┐\n\[$COLOR_CYAN\](\[$COLOR_NC\]\$(date \"+%H:%M\") $(parse_git_branch)\$\[$COLOR_CYAN\])─>\[$COLOR_NC\]"
+\[$COLOR_CYAN)\]─┐\n\
+\[$COLOR_CYAN\]└─(\[$COLOR_NC\]\w\[$COLOR_CYAN\])─\${fill}─(\[$COLOR_NC\]\$(date \"+%H:%M\") $(parse_git_branch)\$\[$COLOR_CYAN\])─>\[$COLOR_NC\]"
     
 
 
