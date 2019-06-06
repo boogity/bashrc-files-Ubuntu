@@ -14,13 +14,7 @@ source .shells/prompt   # Fancy prompt with time and current working dir
 
 
 # Welcome message
-echo -ne "Good Morning, $NICKNAME! It's "; date '+%A, %B %-d %Y'
 curl -4 wttr.in
-echo -e "$COLOR_LIGHT_CYAN Hardware Information: "
-sensors  # Needs: 'sudo apt-get install lm-sensors'
-uptime   # Needs: 'sudo apt-get install lsscsi'
-lsscsi
-free -m 
 
 # if [-n "$force_color_prompt" ]; then
 PS1="\[$COLOR_CYAN\]┌─(\[$COLOR_NC\]\u@\h\[$COLOR_CYAN\])─\${fill}─(\[$COLOR_NC\]\$(date \"+%a, %d %b %y\") \
