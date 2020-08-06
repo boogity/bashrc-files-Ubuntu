@@ -5,11 +5,11 @@ export USERNAME="William"
 # export newPWD="...$(echo -n $PWD | sed -e "s/\(^.\{$cutt\}\)\(.*\)/\2/")"
 # Distribute bashrc into smaller, more specific files
 
-source .shells/defaults
-source .shells/functions
-source .shells/exports
-source .shells/alias
-source .shells/prompt   # Fancy prompt with time and current working dir
+source ~/.shells/defaults
+source ~/.shells/functions
+source ~/.shells/exports
+source ~/.shells/alias
+source ~/.shells/prompt   # Fancy prompt with time and current working dir
 #source .shells/git      # Conveniences - Display current branch etc
 
 
