@@ -12,9 +12,10 @@ alias poweroff='pkill chrome && sudo shutdown now'
 alias reboot='sudo restart now'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
-alias 3='python3'
-alias 2='python2'
-
+alias realmsocksproxy='ssh -D 9988 -C -q -N wadell@storm-ext'
+alias testbedsocksproxy='ssh -D 9989 -C -q -N cep-demo-machine1'
+alias chromerealmproxy='google-chrome --proxy-server="socks5://localhost:9988"'
+alias chrometestbedproxy='google-chrome --proxy-server="socks5://localhost:9989"'
 # Cool colors for man pages
 alias man="TERMINFO=~/.terminfo TERM=mostlike LESS=C PAGER=less man"
 

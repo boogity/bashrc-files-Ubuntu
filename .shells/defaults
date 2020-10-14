@@ -48,7 +48,8 @@ shopt -s cdspell
 #include dotfiles in wildcard expansion, and match case-insensitively
 shopt -s dotglob
 shopt -s nocaseglob
-
+#ban-o that nano, vim 4 win
+FCEDIT=vim
 
 ############## SYSTEM ################
 
