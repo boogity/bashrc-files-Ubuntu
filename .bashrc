@@ -11,7 +11,6 @@ source $HOME/.shells/alias
 source $HOME/.shells/prompt   # Fancy prompt with time and current working dir
 #source $HOME/.shells/git      # Conveniences - Display current branch etc
 
-
 # if [-n "$force_color_prompt" ]; then
 PS1="\[$COLOR_CYAN\]┌─(\[$COLOR_ORANGE\]\u@\h\[$COLOR_CYAN\])─\${fill}─(\[$COLOR_NC\]\$(date \"+%a, %d %b %y\")\
 \[$COLOR_CYAN)\]─┐\n\
