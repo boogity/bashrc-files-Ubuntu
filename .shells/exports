@@ -3,7 +3,7 @@
 export PATH=$HOME/scripts:$HOME/.local/bin:/usr/local/bin:$PATH
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 export EDITOR='vim' ALTERNATE_EDITOR='vim' VISUAL='vim'
-
+# export PAGER="most" -- Don't use a non-standard pager when your home directory roams to other servers
 
 # Bash History
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
@@ -11,8 +11,8 @@ export HISTCONTROL=ignoreboth
 export HISTIGNORE='&:clear:ls:cd:[bf]g:exit:[ t\]*'
 
 # Bitbake Env settings
-export BBPATH=/stuff/maemo-angstrom:/stuff/build:/stuff/openembedded
-export PATH=/stuff/bitbake/bin:$PATH
+#export BBPATH=/stuff/maemo-angstrom:/stuff/build:/stuff/openembedded
+#export PATH=/stuff/bitbake/bin:$PATH
 
 # Proxy settings
 #export http_proxy='127.0.0.1:5050'
@@ -22,5 +22,12 @@ export http_proxy=
 export https_proxy=
 export ftp_proxy=
 
-bind '"\e[1;5D" backward-word' 
-bind '"\e[1;5C" forward-word'
+
+#Prettify Less/Man pages
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'

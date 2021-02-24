@@ -1,14 +1,3 @@
-#REALM Shortcuts
-alias nagioscheck='sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg'
-alias cdceploader='cd /home/realm/repos/realm-utils/CepLoaderUtil/CepLoader'
-alias psqlcepu='psql -U cepuser -d cep -h localhost'
-alias psqlcepr='psql -U cepreader -d cep -h localhost'
-alias uncloser='for f in *.closed; do mv -- "$f" "${f%.tar.gz.closed}.tar.gz"; done; sudo chown wadell:users *'
-alias showflightlogs="ls -ltr /home/ocams/FLIGHT_RFID_DATA/ | grep -v 'csv'"
-alias pwnerator="sudo chown -R wadell:users *"
-alias influxconnector="influx -ssl -unsafeSsl -host timeslip -username admin -password $1"
-
-
 # Cute shell shortcuts
 alias ls='ls --sort=extension --color=auto'
 alias ll='ls -lh'
@@ -23,10 +12,14 @@ alias poweroff='pkill chrome && sudo shutdown now'
 alias reboot='sudo restart now'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
-alias realmsocksproxy='ssh -D 9988 -C -q -N wadell@storm-ext'
-alias testbedsocksproxy='ssh -D 9989 -C -q -N cep-demo-machine1'
-alias chromerealmproxy='google-chrome --proxy-server="socks5://localhost:9988"'
-alias chrometestbedproxy='google-chrome --proxy-server="socks5://localhost:9989"'
+alias 3='python3'
+alias 2='python2'
+alias sshnokey='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no '
+alias synctobashrepo="cp ~/.bashrc . && cp -R ~/.shells/ . && cp ~/.tmux.conf . && cp ~/.vimrc ."
+alias syncfrombashrepo="cp .bashrc ~/.bashrc && cp -R .shells/ ~/ && cp .tmux.conf ~/ && cp .vimrc ~/"
+# Allows for proper colorschemes when using tmux
+alias tmux="TERM=screen-256color-bce tmux"
+
 # Cool colors for man pages
 alias man="TERMINFO=~/.terminfo TERM=mostlike LESS=C PAGER=less man"
 
@@ -43,8 +36,8 @@ fi
 
 # This one is to take care of make
 # Give me a nice, distinguishable make output
-alias make='clear && make'
-alias m='make'
+#alias make='clear && make'
+#alias m='make'
 
 # Some more, to avoid mistakes
 alias rm='rm -i'
@@ -63,3 +56,22 @@ alias glf='git ls-files'
 
 # Quickly load bashrc
 alias gogo='source ~/.bashrc'
+
+#METECS SOCKS Proxies
+alias realmsocksproxy='ssh -D 9988 -C -q -N wadell@storm-ext'
+alias testbedsocksproxy='ssh -D 9989 -C -q -N cep-demo-machine1'
+alias metecs-socksproxy='ssh -D 9987 -C -q -N wkstn18'
+alias chromerealmproxy='google-chrome --proxy-server="socks5://localhost:9988"'
+alias chrometestbedproxy='google-chrome --proxy-server="socks5://localhost:9989"'
+alias chromemetecs-proxy='google-chrome --proxy-server="socks5://localhost:9987"'
+
+#Nagios Aliases
+alias nagioscheck='sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg'
+
+# Stop the syslog spam with this evince alias
+# /var/log/syslog being inundated with evince errors that seem superfluous, attempting to route those to /dev/null but keep real errors (with a grep -v). Examples below:
+#
+#Nov 25 11:46:39 metecs-wkstn18 evince[9481]: Error setting file metadata: can’t open metadata tree
+#Nov 25 11:46:41 metecs-wkstn18 evince[9481]: Attempting to store changes into '/users/wdell/.local/share/recently-used.xbel', but failed: Failed to create file “/users/wdell/.local/share/recently-used.xbel.K9SOU0”: Permission denied
+
+alias evince='evince 2> >( grep -v "evince.*WARNING" >&2 )'
