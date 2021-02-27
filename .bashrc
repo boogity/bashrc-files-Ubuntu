@@ -1,7 +1,6 @@
 #TODO: Come up with a good function to output STDERRED in red. 
 
 # Distribute bashrc into smaller, more specific files
-PATH="${HOME}/bin:$PATH"
 
 source $HOME/.shells/defaults
 source $HOME/.shells/functions
