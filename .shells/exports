@@ -3,7 +3,8 @@
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 export EDITOR='vim' ALTERNATE_EDITOR='vim' VISUAL='vim'
-# export PAGER="most" -- Don't use a non-standard pager when your home directory roams to other servers
+#export PAGER="most" # Don't use a non-standard pager when your home directory roams to other servers
+export MANPAGER='less -s -M +Gg'
 
 # Bash History
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
@@ -23,7 +24,7 @@ export https_proxy=
 export ftp_proxy=
 
 
-# Prettify Less/Man pages
+# Prettify less/man pages
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
 export LESS_TERMCAP_me=$'\e[0m'

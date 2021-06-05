@@ -21,7 +21,7 @@ alias syncfrombashrepo="cp .bashrc ~/.bashrc && cp -R .shells/ ~/ && cp .tmux.co
 alias tmux="TERM=screen-256color-bce tmux"
 
 # Cool colors for man pages
-alias man="TERMINFO=~/.terminfo TERM=mostlike LESS=C PAGER=less man"
+#alias man="TERMINFO=~/.terminfo TERM=mostlike LESS=C PAGER=less man"
 
 # Enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
