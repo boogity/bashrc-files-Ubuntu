@@ -4,11 +4,11 @@ alias cdceploader='cd /home/realm/repos/realm-utils/CepLoaderUtil/CepLoader'
 alias psqlcepu='psql -U cepuser -d cep -h localhost'
 alias psqlcepr='psql -U cepreader -d cep -h localhost'
 alias uncloser='for f in *.closed; do mv -- "$f" "${f%.tar.gz.closed}.tar.gz"; done; sudo chown wadell:users *'
-alias showflightlogs="ls -ltr /home/ocams/FLIGHT_RFID_DATA/ | grep -v 'csv'"
+alias showflightlogs="ls -ltr /home/ocams/FLIGHT_RFID_DATA/ | grep -v 'csv' | grep -v 'realmvm-data' "
+alias showarchiveflightlogs="ls -ltr /home/ocams/ARCHIVED_FLIGHT_RFID_DATA/ | grep -v 'csv' | grep -v 'realmvm-data' "
 alias pwnerator="sudo chown -R wadell:users *"
 alias influxconnector="influx -ssl -unsafeSsl -host timeslip -username admin -password $1"
-
-
+alias cleanup="rm -f /users/wadell/test/treebeard-work-files/*"
 # Cute shell shortcuts
 alias ls='ls --sort=extension --color=auto'
 alias ll='ls -lh'

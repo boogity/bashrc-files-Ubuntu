@@ -1,4 +1,5 @@
 export COLOR_RED='\e[0;31m'
+
 # Functions to aid git workflow
 function ga(){
     git add $1
@@ -84,6 +85,16 @@ function parse_git_branch {
 git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
+##########		REALM FUNCTIONS		###############
+#How to dynamically update date on files and ember# ?
+# for i in 1 2 4 5 6; 
+#	do mkdir ember${i} && sudo cp /home/ocams/FLIGHT_RFID_DATA/ember${i}_logs_20200820_020001.tar.gz.closed ember${i}/ember${i}_logs_20200820_020001.tar.gz; 
+# done
+#function getemberlogs() {
+#  if [-f $1 ] ; then
+#    for $arg 
+#    do sudo cp /home/ocams/FLIGHT_RFID_DATA/ember$arg_		
+#}
 
 #STDERR handling in red
 make()
@@ -95,3 +106,5 @@ make()
   /usr/bin/make "$@" 2>&1 | sed -E -e "/[Ee]rror[: ]/ s%$pathpat%$ccred&$ccend%g" -e "/[Ww]arning[: ]/ s%$pathpat%$ccyellow&$ccend%g"
   return ${PIPESTATUS[0]}
 }
+
+
