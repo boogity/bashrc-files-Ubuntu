@@ -1,7 +1,8 @@
 #!/bin/bash 
 
-source /etc/bash_completion.d/git 
-source /etc/bash_completion.d/git5 
+if [[ $(ls -l /etc/bash_completion.d/git* 2> /dev/null | wc -l) -gt 0 ]]; then
+    source /etc/bash_completion.d/git*
+fi
 
 # Very useful for stash handling
 function show-stash() 

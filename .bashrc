@@ -1,20 +1,15 @@
 #TODO: Come up with a good function to output STDERRED in red. 
 
-export USERNAME="William"
-#export NICKNAME="Willy"
-# export newPWD="...$(echo -n $PWD | sed -e "s/\(^.\{$cutt\}\)\(.*\)/\2/")"
 # Distribute bashrc into smaller, more specific files
 
-source ~/.shells/defaults
-source ~/.shells/functions
-source ~/.shells/exports
-source ~/.shells/alias
-source ~/.shells/prompt   # Fancy prompt with time and current working dir
-#source .shells/git      # Conveniences - Display current branch etc
+source $HOME/.shells/defaults
+source $HOME/.shells/functions
+source $HOME/.shells/exports
+source $HOME/.shells/alias
+source $HOME/.shells/prompt   # Fancy prompt with time and current working dir
+source $HOME/.shells/git      # Conveniences - Display current branch etc
 
 
-# Welcome message
-#curl -4 wttr.in
 
 # if [-n "$force_color_prompt" ]; then
 PS1="\[$COLOR_CYAN\]┌─(\[$COLOR_NC\]\u@\h\[$COLOR_CYAN\])─\${fill}─(\[$COLOR_NC\]\$(date \"+%a, %d %b %y\") \

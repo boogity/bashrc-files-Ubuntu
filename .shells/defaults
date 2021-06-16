@@ -8,26 +8,27 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=100000
+HISTSIZE=9001
 HISTFILESIZE=2000000
 
 # Save and reload history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
+HISTTIMEFORMAT='%F %T: '
 
 
 ############## GENERAL UI ################
 force_color_prompt=yes
 
 # Vim key-bindings
-set -o vi
+#set -o vi
 
 # Check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
 # Make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # Set variable identifying the chroot you work in
 # (used in the prompt below)
@@ -48,11 +49,13 @@ shopt -s cdspell
 #include dotfiles in wildcard expansion, and match case-insensitively
 shopt -s dotglob
 shopt -s nocaseglob
+#ban-o that nano, vim 4 win
+FCEDIT=vim
 
 
 ############## SYSTEM ################
 
-export PATH=$PATH:/usr/games/
+#export PATH=$PATH:/usr/games/
 
 
 
