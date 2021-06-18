@@ -12,9 +12,9 @@ source $HOME/.shells/git      # Conveniences - Display current branch etc
 
 
 # if [-n "$force_color_prompt" ]; then
-PS1="\[$COLOR_CYAN\]┌─(\[$COLOR_NC\]\u@\h\[$COLOR_CYAN\])─\${fill}─(\[$COLOR_NC\]\$(date \"+%a, %d %b %y\") \
+PS1="\[$COLOR_CYAN\]┌─(\[$COLOR_NC\]\u@\h\[$COLOR_CYAN\])─\${fill}─(\[$COLOR_NC\]\$(date \"+%a, %d %b %y\")\
 \[$COLOR_CYAN)\]─┐\n\
-\[$COLOR_CYAN\]└─(\[$COLOR_YELLOW\]\w\[$COLOR_CYAN\])─\${fill}─(\[$COLOR_NC\]\$(date +%H:%M) $(parse_git_branch)\[$COLOR_CYAN\])─>\[$COLOR_NC\]"
+\[$COLOR_CYAN\]└─(\[$COLOR_YELLOW\]\w\[$COLOR_CYAN\])─\${fill}─(\[$COLOR_NC\]\$(date +%H:%M)\[$COLOR_CYAN\])─>\[$COLOR_NC\]"
     
 
 
