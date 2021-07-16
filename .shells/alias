@@ -28,6 +28,7 @@ alias 2='python2'
 alias sshnokey='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no '
 alias synctobashrepo="cp ~/.bashrc . && cp -R ~/.shells/ . && cp ~/.tmux.conf . && cp ~/.vimrc ."
 alias syncfrombashrepo="cp .bashrc ~/.bashrc && cp -R .shells/ ~/ && cp .tmux.conf ~/ && cp .vimrc ~/"
+alias removewhitespaces="sed -i 's/[ \t]*$//' "$1""
 
 # Allows for proper colorschemes when using tmux
 # TODO: Research further. Some servers don't allow screen-256-color-bce -- "command not found"
@@ -71,7 +72,7 @@ alias glf='git ls-files'
 alias gogo='source ~/.bashrc'
 
 # METECS SOCKS Proxies
-alias realmsocksproxy='ssh -D 9988 -C -q -N wadell@storm-ext'
+alias realmsocksproxy='ssh -D 9988 -C -q -N bagend'
 alias testbedsocksproxy='ssh -D 9989 -C -q -N cep-demo-machine1'
 alias metecs-socksproxy='ssh -D 9987 -C -q -N wkstn18'
 alias chromerealmproxy='google-chrome --proxy-server="socks5://localhost:9988"'
