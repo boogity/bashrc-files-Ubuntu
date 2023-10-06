@@ -1,3 +1,5 @@
+# Aliases to not include in a git commit
+alias gotodark='cd /mnt/c/Users/amin/AppData/Roaming/.summertime-saga/ && explorer.exe .'
 # REALM Shortcuts
 alias nagioscheck='sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg'
 alias cdceploader='cd /home/realm/repos/realm-utils/CepLoaderUtil/CepLoader'
@@ -72,12 +74,12 @@ alias glf='git ls-files'
 alias gogo='source ~/.bashrc'
 
 # METECS SOCKS Proxies
-alias realmsocksproxy='ssh -D 9988 -C -q -N bagend'
-alias testbedsocksproxy='ssh -D 9989 -C -q -N cep-demo-machine1'
-alias metecs-socksproxy='ssh -D 9987 -C -q -N wkstn18'
+alias realmsocksproxy='ssh -D 9988 -C -q -N drax-ext'
+alias testbedsocksproxy='ssh -D 9988 -C -q -N cep-demo-machine1'
+alias metecs-socksproxy='ssh -D 9988 -C -q -N workstation'
 alias chromerealmproxy='google-chrome --proxy-server="socks5://localhost:9988"'
-alias chrometestbedproxy='google-chrome --proxy-server="socks5://localhost:9989"'
-alias chromemetecs-proxy='google-chrome --proxy-server="socks5://localhost:9987"'
+alias chrometestbedproxy='google-chrome --proxy-server="socks5://localhost:9988"'
+alias chromemetecs-proxy='google-chrome --proxy-server="socks5://localhost:9988"'
 
 # nagios Aliases
 alias nagioscheck='sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg'
