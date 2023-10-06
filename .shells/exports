@@ -1,6 +1,4 @@
-
-
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH="/mnt/d/Photography and Videography/````Useful Scripts":$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 export EDITOR='vim' ALTERNATE_EDITOR='vim' VISUAL='vim'
 #export PAGER="most" # Don't use a non-standard pager when your home directory roams to other servers
@@ -23,7 +21,6 @@ export http_proxy=
 export https_proxy=
 export ftp_proxy=
 
-
 # Prettify less/man pages
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
@@ -37,3 +34,5 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 bind '"\e[1;5D" backward-word'
 bind '"\e[1;5C" forward-word'
 
+# CTRL + BACKSPACE to erase previous word (can also use CTRL+W without this)
+bind '"\C-H":unix-word-rubout'
