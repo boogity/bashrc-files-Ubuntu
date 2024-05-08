@@ -16,7 +16,7 @@ export turqoise="\[\033[0;38;5;50m\]"
 export smoothgreen="\[\033[0;38;5;42m\]"
 ### TODO: Escape CAPS color values with \[ \] then update prompt
 #   This to prevent line-wrapping wonkiness
-export NO_COLOR='\e[0m' # No Color
+export NO_COLOR="\[\033\e[0m\]" # No Color
 export COLOR_WHITE='\e[1;37m'
 export COLOR_BLACK='\e[0;30m'
 export COLOR_BLUE='\e[0;34m'
@@ -37,21 +37,25 @@ export COLOR_LIGHT_GRAY='\e[0;37m'
 
 case "$TERM" in
 xterm*)
-    PS1="${bblue}┌─(${yellow}\u@\h${bblue})─\
-(${yellow}\w${bblue})-(${yellow}\$(date \"+%Y-%m-%d %H:%M:%S\")\
-${bblue})┐\n${bblue}└─(${yellow}\
-\$(parse_git_branch)${bblue})─>${yellow}"
+    PS1="${cyan}┌─(${NO_COLOR}\u@\h${cyan})─\
+(${NO_COLOR}\w${cyan})-(${NO_COLOR}\$(date \"+%Y-%m-%d %H:%M:%S\")\
+${cyan})┐\n${cyan}└─(${yellow}\
+\$(parse_git_branch)${cyan})─>${NO_COLOR}"
     ;;
 screen*)
-    PS1="\[${COLOR_YELLOW}\]┌─(\[${NO_COLOR}\]\u@\h\[${COLOR_YELLOW}\])─\
-(\[${NO_COLOR}\]\w\[${COLOR_YELLOW}\])-(\[${NO_COLOR}\]\$(date \"+%Y-%m-%d %H:%M:%S\")\
-\[${COLOR_YELLOW}\])┐\n\[${COLOR_YELLOW}\]└─(\[${NO_COLOR}\]\
-\$(parse_git_branch)\[${COLOR_YELLOW}\])─>\[${NO_COLOR}\]"
+    PS1="\[${COLOR_YELLOW}\]┌─(${NO_COLOR}\u@\h\[${COLOR_YELLOW}\])─\
+(${NO_COLOR}\w\[${COLOR_YELLOW}\])-(${NO_COLOR}\$(date \"+%Y-%m-%d %H:%M:%S\")\
+\[${COLOR_YELLOW}\])┐\n\[${COLOR_YELLOW}\]└─(${NO_COLOR}\
+\$(parse_git_branch)\[${COLOR_YELLOW}\])─>${NO_COLOR}"
+#    PS1="\[${COLOR_YELLOW}\]┌─(\[${NO_COLOR}\]\u@\h\[${COLOR_YELLOW}\])─\
+#(\[${NO_COLOR}\]\w\[${COLOR_YELLOW}\])-(\[${NO_COLOR}\]\$(date \"+%Y-%m-%d %H:%M:%S\")\
+#\[${COLOR_YELLOW}\])┐\n\[${COLOR_YELLOW}\]└─(\[${NO_COLOR}\]\
+#\$(parse_git_branch)\[${COLOR_YELLOW}\])─>\[${NO_COLOR}\]"
     ;;    
     *)
-    PS1="\[${COLOR_LIGHT_GREEN}\]┌─(\[${NO_COLOR}\]\u@\h\[${COLOR_LIGHT_GREEN}\])─\
-(\[${NO_COLOR}\]\w\[${COLOR_LIGHT_GREEN}\])-(\[${NO_COLOR}\]\$(date \"+%Y-%m-%d %H:%M:%S\")\
-\[${COLOR_LIGHT_GREEN}\])┐\n└─(\[${NO_COLOR}\]\
-\$(parse_git_branch)\[${COLOR_LIGHT_GREEN}\])─>\[${NO_COLOR}\]"
+    PS1="\[${COLOR_LIGHT_GREEN}\]┌─(${NO_COLOR}\u@\h\[${COLOR_LIGHT_GREEN}\])─\
+(${NO_COLOR}\w\[${COLOR_LIGHT_GREEN}\])-(${NO_COLOR}\$(date \"+%Y-%m-%d %H:%M:%S\")\
+\[${COLOR_LIGHT_GREEN}\])┐\n└─(${NO_COLOR}\
+\$(parse_git_branch)\[${COLOR_LIGHT_GREEN}\])─>${NO_COLOR}"
     ;;
 esac
