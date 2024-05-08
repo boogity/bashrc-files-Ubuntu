@@ -14,3 +14,4 @@ set shiftwidth=4
 set expandtab    
 colorscheme ron
 set visualbell
+set colorcolumn=80

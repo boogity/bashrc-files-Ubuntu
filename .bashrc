@@ -11,9 +11,9 @@ source $HOME/.shells/prompt   # Fancy prompt with time and current working dir
 PROMPT_DIRTRIM=2
 
 # if [-n "$force_color_prompt" ]; then
-PS1="\[$COLOR_CYAN\]┌─(\[$COLOR_NC\]\u@\h\[$COLOR_CYAN\])─\${fill}─\
-(\[$COLOR_NC\]\$(date \"+%a, %d %b %y\")\[$COLOR_CYAN)\]─┐\n\
-\[$COLOR_CYAN\]└─(\[$COLOR_YELLOW\]\w\[$COLOR_CYAN\])─\${fill}─(\[$COLOR_NC\]\$(date +%H:%M)\[$COLOR_CYAN\])─>\[$COLOR_NC\]"
+#PS1="\[$COLOR_CYAN\]┌─(\[$COLOR_NC\]\u@\h\[$COLOR_CYAN\])─\${fill}─\
+#(\[$COLOR_NC\]\$(date \"+%a, %d %b %y\")\[$COLOR_CYAN)\]─┐\n\
+#\[$COLOR_CYAN\]└─(\[$COLOR_YELLOW\]\w\[$COLOR_CYAN\])─\${fill}─(\[$COLOR_NC\]\$(date +%H:%M)\[$COLOR_CYAN\])─>\[$COLOR_NC\]"
 
 # Node Version Manager script addition
 export NVM_DIR="$HOME/.nvm"

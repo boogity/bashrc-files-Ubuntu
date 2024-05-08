@@ -76,7 +76,11 @@ alias gogo='source ~/.bashrc'
 # METECS SOCKS Proxies
 alias realmsocksproxy='ssh -D 9988 -C -q -N drax-ext'
 alias testbedsocksproxy='ssh -D 9988 -C -q -N cep-demo-machine1'
-alias metecs-socksproxy='ssh -D 9988 -C -q -N workstation'
+alias metecs-socksproxy='ssh -D 9988 -C -q -N workstation-ext'
+alias gothamsocksproxy='ssh -D 9988 -C -q -N batcave'
+# Druid SOCKS only works when s76-william is dual-homed on JEWL and Druid LAN
+alias druidsocksproxy='ssh -D 9988 -C -q -N s76-william'
+# Launch browser after SOCKS proxy is set (Firefox profiles handles this better)
 alias chromerealmproxy='google-chrome --proxy-server="socks5://localhost:9988"'
 alias chrometestbedproxy='google-chrome --proxy-server="socks5://localhost:9988"'
 alias chromemetecs-proxy='google-chrome --proxy-server="socks5://localhost:9988"'
